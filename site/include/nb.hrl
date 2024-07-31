@@ -1,0 +1,1 @@
+-record(visitor, {date, time, name, company}).
