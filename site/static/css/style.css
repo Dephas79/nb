@@ -19,10 +19,10 @@ h1 {
     padding-bottom: 7px;
     border-bottom: dashed 1px #DDD;
     text-transform: uppercase;
-    font-size: 1.875em;
+    font-size: 3em;
     line-height: 1.066667em;
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
 }
 
 h2 {
@@ -31,6 +31,20 @@ h2 {
     line-height: 1.333333em;
     margin-top: 1.6em;
     margin-bottom: 1.6em;
+}
+
+li.visitors {
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+li.associates {
+    font-size: 1em;
+    line-height: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 h3 {
@@ -48,7 +62,6 @@ p {
     margin-bottom: 2em;
 }
 
-
 a, a:visited { 
     color: #4488FF;
     text-decoration: none; 
@@ -57,3 +70,4 @@ a, a:visited {
 a:hover, a:active { 
     text-decoration: underline; 
 }
+
