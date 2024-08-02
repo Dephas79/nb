@@ -35,7 +35,7 @@ get_visitors(Date) ->
 %% @doc dump the db; handy for debugging
 dump_visitors() ->
     open_visitors_db(),
-    List = dets:match_object(visitors, '-'),
+    List = dets:match_object(visitors, '_'),
     close_visitors_db(),
     List.
 

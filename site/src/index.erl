@@ -4,6 +4,7 @@
 -include_lib("nitrogen_core/include/wf.hrl").
 
 main() -> #template { file="./site/templates/bare.html" }.
+
 title() -> "Welcome to Nitrogen".
 
 body() ->

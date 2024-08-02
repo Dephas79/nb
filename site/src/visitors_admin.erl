@@ -19,7 +19,7 @@ body() ->
                 unless_has_value=company}
         ]}),
 
-        wf:defer(save, date, #validate{validators=[
+        wf:defer(save, date1, #validate{validators=[
             #is_required{text="Date is required"}
         ]}),
 %% List of Nitrogen elemnts
@@ -82,12 +82,16 @@ parse_date(Date) ->
 
 %% Event functions
 event(done) ->
+    io:format(" Done"),
     wf:wire(#confirm{text="Done?", postback=done_ok});
 event(done_ok) -> wf:redirect("/");
 
 event(save) ->
+    io:format(" Save event"),
     wf:wire(#confirm{text="Save?", postback=confirm_ok});
+
 event(confirm_ok) ->
+    io:format(" confirm_ok"),
     save_visitor(),
     wf:wire(#clear_validation{}),
     wf:update(inner_body, inner_body()).
@@ -99,5 +103,6 @@ save_visitor() ->
     Company = wf:q(company),
     Date = parse_date(wf:q(date1)),
     Record = #visitor{date=Date, time=Time, name=Name, company=Company},
+    %%io:format("~p",[Record]),
     visitors_db:put_visitor(Record).
 
