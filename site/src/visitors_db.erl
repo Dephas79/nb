@@ -31,6 +31,14 @@ get_visitors(Date) ->
     List1 = lists:sort(List),
     List1.
 
+%%vip visitors
+%%get_vip(Date) ->
+    %%open_visitors_db(),
+    %%List = dets:lookup(vip, Date),
+    %%close_visitors_db(),
+    %%List1 = listst:sort(List),
+    %%List1.
+
 %% the utility function 
 %% @doc dump the db; handy for debugging
 dump_visitors() ->
@@ -38,6 +46,12 @@ dump_visitors() ->
     List = dets:match_object(visitors, '_'),
     close_visitors_db(),
     List.
+
+%%dump_visitors() ->
+  %%  open_visitors_db(),
+    %%List = det:match_object(vip, '_'),
+    %%close_visitors_db(),
+    %%List.
 
 %% @doc Pretty print visitor by name, company, or both
 format_name(#visitor{name=Name, company=""}) -> Name;

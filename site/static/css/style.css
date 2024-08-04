@@ -4,19 +4,22 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /***** STYLE *****/
 
 body { 
+    /*text-align: center;*/
     font-family: "Lucida Grande", "Segoe UI", Tahoma, Helvetica, Arial, sans-serif; 
     font-size: 16px;
     line-height: 32px;
 }
 
 .container_12 {
+   /* text-align: center;*/
     margin-top: 40px;
 }
 
 h1 {
+    
     font-family: Arial, sans-serif;
     font-weight: bold;
-    color: blue;
+    color: rgb(241, 75, 9);
     padding-bottom: 7px;
     border-bottom: dashed 1px #DDD;
     text-transform: uppercase;
@@ -34,19 +37,20 @@ h2 {
     margin-bottom: 1.6em;
 }
 
-li.visitors {
-    font-size: 2em;
+li.visitors, li.associates {
+    list-style-type: none;
+   /* font-size: 2em;
     line-height: 1em;
     margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.2em;*/
 }
 
-li.associates {
+/*li.associates {
     font-size: 1em;
     line-height: 1em;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
-}
+}*/
 
 h3 {
     font-family: Arial, sans-serif;
